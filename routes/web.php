@@ -23,7 +23,38 @@ Route::get('/', function () {
             'Lost Ark',
             'World of Warcraft',
             'Devil may cry 5'
+        ],
+        'links' => [
+            [
+                'name' => 'Home',
+                'url' => '/'
+            ],
+            [
+                'name' => 'About',
+                'url' => '/about'
+            ],
+            [
+                'name' => 'Services',
+                'url' => '/services'
+            ],
+            [
+                'name' => 'Contacts',
+                'url' => '/contacts'
+            ]
+           
         ]
     ];
     return view('home',$data);
+});
+
+Route::get('/about',function () {
+    return view('about');
+});
+
+Route::get('/services',function () {
+    return view('services');
+});
+
+Route::get('/contacts',function () {
+    return view('contacts');
 });
